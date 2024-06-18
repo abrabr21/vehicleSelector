@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/im_image"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/icon_card_size"
+        android:padding="@dimen/small_margin"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="@dimen/default_margin"
+        android:tint="@color/color_background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sports_car_icon" />
+
+    <LinearLayout
+        android:id="@+id/ll_info_block"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/im_image">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:hint="@string/common_car_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                style="@style/EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:paddingHorizontal="@dimen/small_margin"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_size_small"
+            tools:text="Car Brand" />
+
+        <TextView
+            android:id="@+id/tv_brand_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:gravity="top"
+            android:paddingHorizontal="@dimen/small_margin"
+            android:text="@string/vehicle_selector_brand"
+            android:textAllCaps="true"
+            android:textColor="@color/switch_color_disabled"
+            android:textSize="@dimen/text_size_xsmall" />
+
+        <TextView
+            android:id="@+id/tv_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:paddingHorizontal="@dimen/small_margin"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_size_small"
+            tools:text="Car Model" />
+
+        <TextView
+            android:id="@+id/tv_model_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:gravity="top"
+            android:paddingHorizontal="@dimen/small_margin"
+            android:text="@string/vehicle_selector_manufacturer_type"
+            android:textAllCaps="true"
+            android:textColor="@color/switch_color_disabled"
+            android:textSize="@dimen/text_size_xsmall" />
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:paddingHorizontal="@dimen/small_margin"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_size_small"
+            tools:text="Car Brand" />
+
+        <TextView
+            android:id="@+id/tv_year_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:gravity="top"
+            android:paddingHorizontal="@dimen/small_margin"
+            android:text="@string/vehicle_selector_year"
+            android:textAllCaps="true"
+            android:textColor="@color/switch_color_disabled"
+            android:textSize="@dimen/text_size_xsmall" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

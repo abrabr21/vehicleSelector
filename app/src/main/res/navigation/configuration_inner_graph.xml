@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/configuration_inner_graph"
+    app:startDestination="@id/carBrandFragment">
+
+    <fragment
+        android:id="@+id/carBrandFragment"
+        android:name="com.vehicle.selector.presentation.configuration_flow.child_config.CarBrandFragment"
+        tools:layout="@layout/fragment_brand_configuration" >
+        <action
+            android:id="@+id/action_carBrandFragment_to_carModelFragment"
+            app:destination="@id/carModelFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/carModelFragment"
+        android:name="com.vehicle.selector.presentation.configuration_flow.child_config.CarModelFragment"
+        android:label="CarModelFragment"
+        tools:layout="@layout/fragment_model_configuration">
+        <action
+            android:id="@+id/action_carModelFragment_to_carYearFragment"
+            app:destination="@id/carYearFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/carYearFragment"
+        android:name="com.vehicle.selector.presentation.configuration_flow.child_config.CarYearFragment"
+        android:label="CarYearFragment"
+        tools:layout="@layout/fragment_year_configuration">
+        <action
+            android:id="@+id/action_carYearFragment_to_summaryConfigurationFragment"
+            app:destination="@id/summaryConfigurationFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryConfigurationFragment"
+        android:name="com.vehicle.selector.presentation.configuration_flow.child_config.SummaryConfigurationFragment"
+        android:label="SummaryConfigurationFragment" />
+</navigation>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/color_white"
+    app:cardCornerRadius="@dimen/corner_radius_small">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgr_list_item_selector_small"
+        android:foreground="?selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/im_image"
+            android:layout_width="@dimen/icon_card_size"
+            android:layout_height="@dimen/icon_card_size"
+            android:padding="@dimen/small_margin"
+            android:scaleType="fitCenter"
+            android:tint="@color/color_background_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_sports_car_icon" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:lines="1"
+            android:maxLength="30"
+            android:textColor="@color/color_text_dark"
+            android:textSize="@dimen/text_size_xlarge"
+            app:layout_constraintBottom_toBottomOf="@id/im_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/im_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Car Name" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_look_it"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/im_image">
+
+            <TextView
+                android:id="@+id/tv_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingHorizontal="@dimen/small_margin"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/text_size_small"
+                tools:text="Car Brand" />
+
+            <TextView
+                android:id="@+id/tv_brand_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="top"
+                android:paddingHorizontal="@dimen/small_margin"
+                android:text="@string/vehicle_selector_brand"
+                android:textAllCaps="true"
+                android:textColor="@color/switch_color_disabled"
+                android:textSize="@dimen/text_size_xsmall" />
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingHorizontal="@dimen/small_margin"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/text_size_small"
+                tools:text="Car Model" />
+
+            <TextView
+                android:id="@+id/tv_model_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="top"
+                android:paddingHorizontal="@dimen/small_margin"
+                android:text="@string/vehicle_selector_manufacturer_type"
+                android:textAllCaps="true"
+                android:textColor="@color/switch_color_disabled"
+                android:textSize="@dimen/text_size_xsmall" />
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingHorizontal="@dimen/small_margin"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/text_size_small"
+                tools:text="Car Brand" />
+
+            <TextView
+                android:id="@+id/tv_year_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="top"
+                android:paddingHorizontal="@dimen/small_margin"
+                android:text="@string/vehicle_selector_year"
+                android:textAllCaps="true"
+                android:textColor="@color/switch_color_disabled"
+                android:textSize="@dimen/text_size_xsmall" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_look_it"
+            style="@style/LightButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:gravity="center"
+            android:text="@string/common_look_it"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_small"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_remove"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_remove"
+            style="@style/OutlinedButtonStyle"
+            android:layout_width="@dimen/button_height"
+            android:layout_height="0dp"
+            android:paddingTop="@dimen/small_margin"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_delete"
+            app:iconGravity="textTop"
+            app:iconTint="@color/color_icon_dark"
+            app:layout_constraintBottom_toBottomOf="@id/btn_look_it"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_look_it"
+            app:layout_constraintTop_toTopOf="@id/btn_look_it"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

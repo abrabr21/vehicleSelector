@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vehicle_chosser_grapgh"
+    app:startDestination="@id/mainVehicleSelectorFragment">
+
+    <fragment
+        android:id="@+id/mainVehicleSelectorFragment"
+        android:name="com.vehicle.selector.presentation.selection_flow.MainVehicleSelectorFragment"
+        android:label="MainVehicleSelectorFragment">
+        <action
+            android:id="@+id/action_mainVehicleSelectorFragment_to_mainCarConfigurationFragment"
+            app:destination="@id/mainCarConfigurationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/empty_animation"
+            app:popEnterAnim="@anim/empty_animation"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainVehicleSelectorFragment_to_vehicleDetailsFragment"
+            app:destination="@id/vehicleDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/empty_animation"
+            app:popEnterAnim="@anim/empty_animation"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainCarConfigurationFragment"
+        android:name="com.vehicle.selector.presentation.configuration_flow.MainCarConfigurationFragment"
+        android:label="MainCarConfigurationFragment" />
+    <fragment
+        android:id="@+id/vehicleDetailsFragment"
+        android:name="com.vehicle.selector.presentation.selection_flow.details.VehicleDetailsFragment"
+        android:label="VehicleDetailsFragment" >
+        <argument
+            android:name="carId"
+            android:defaultValue="0"
+            app:argType="integer" />
+        </fragment>
+
+</navigation>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="vehicle_selector_title">Choose your car</string>
+    <string name="vehicle_selector_add_new_one">Add New One</string>
+    <string name="vehicle_selector_no_vehicles">Seems like you have not create any car yet</string>
+    <string name="vehicle_selector_brand">Brand</string>
+    <string name="vehicle_selector_manufacturer_type">Model</string>
+    <string name="vehicle_selector_year">Year</string>
+    <string name="common_look_it">Look it</string>
+    <string name="common_delete">Delete</string>
+    <string name="app_name">VehicleSelector</string>
+    <string name="common_next">Next</string>
+    <string name="common_continue">Continue</string>
+    <string name="common_go_back">Go Back</string>
+    <string name="common_summary">Summary</string>
+    <string name="common_search">Search</string>
+    <string name="common_car_name">Car Name</string>
+    <string name="common_required_field">Required field</string>
+    <string name="common_error_msg">Oops, something went wrong</string>
+    <string name="common_save">Save</string>
+    <string name="common_loading">Loading</string>
+    <string name="your_car">Your Car</string>
+    <string name="brand_placeholder">Brand: %s</string>
+    <string name="model_placeholder">Model: %s</string>
+</resources>
